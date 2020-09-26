@@ -1,3 +1,4 @@
+const MICROSERVICE_APP = process.env.MICROSERVICE_APP;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -5,7 +6,7 @@ function sleep(ms) {
 
 async function main() {
   while(true) {
-    console.log("Microservices rock!");
+    console.log(`${MICROSERVICE_APP} rocks!`);
     await sleep(5000);
   }
 }
